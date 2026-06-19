@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megatric Electrical CC | 24/7 Electrical Solutions in Namibia</title>
+<meta name="description" content="Megatric Electrical CC – Professional electrical installations, repairs, inspections, maintenance, and emergency callouts. Serving residential, commercial, and industrial clients across Namibia. Available 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --black: #08080A;
+    --charcoal: #141416;
+    --charcoal-mid: #1E1E22;
+    --charcoal-light: #2A2A30;
+    --gold: #C9A84C;
+    --gold-light: #E2C97E;
+    --gold-dim: #8B6E2A;
+    --white: #F5F0E8;
+    --white-dim: #A8A49C;
+    --white-faint: #3A3830;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── Typography ── */
+  .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; line-height: 0.95; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--charcoal); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+  /* ── Nav ── */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: background 0.4s, backdrop-filter 0.4s, box-shadow 0.4s;
+  }
+  #navbar.scrolled {
+    background: rgba(8,8,10,0.92);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 1px 0 rgba(201,168,76,0.15);
+  }
+  .nav-link {
+    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--white-dim);
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--gold); }
+
+  /* ── Hero ── */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,168,76,0.06) 0%, transparent 70%),
+                var(--black);
+  }
+
+  #hero-canvas {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0;
+  }
+
+  .hero-content { position: relative; z-index: 2; }
+
+  .hero-headline {
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    line-height: 0.92;
+  }
+
+  .gold-word { color: var(--gold); }
+
+  .hero-sub {
+    color: var(--white-dim);
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 700; font-size: 0.85rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 16px 32px; border-radius: 4px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    border: none; cursor: pointer; text-decoration: none;
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(255,255,255,0.12);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  .btn-primary:hover::after { transform: translateX(0); }
+  .btn-primary:hover { box-shadow: 0 0 32px rgba(201,168,76,0.4); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: transparent;
+    color: var(--white);
+    font-weight: 600; font-size: 0.85rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 15px 32px; border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.35);
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    text-decoration: none;
+  }
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  /* Trust badges */
+  .trust-badge {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--white-dim);
+  }
+  .trust-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 8px rgba(201,168,76,0.7);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%,100% { box-shadow: 0 0 6px rgba(201,168,76,0.7); }
+    50% { box-shadow: 0 0 16px rgba(201,168,76,1); }
+  }
+
+  /* ── Divider ── */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::before {
+    content: ''; display: inline-block;
+    width: 32px; height: 1px; background: var(--gold); opacity: 0.6;
+  }
+
+  /* ── Service Cards ── */
+  .service-card {
+    background: var(--charcoal-mid);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden;
+    cursor: default;
+  }
+  .service-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .service-card:hover {
+    border-color: rgba(201,168,76,0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(201,168,76,0.05);
+  }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(201,168,76,0.1);
+    border-radius: 8px; margin-bottom: 16px;
+    font-size: 1.4rem;
+    transition: background 0.3s;
+  }
+  .service-card:hover .service-icon { background: rgba(201,168,76,0.18); }
+
+  /* ── Why Choose Us ── */
+  .feature-card {
+    padding: 24px;
+    border-left: 2px solid rgba(201,168,76,0.2);
+    transition: border-color 0.3s;
+  }
+  .feature-card:hover { border-color: var(--gold); }
+
+  /* ── Emergency ── */
+  #emergency {
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
+      var(--charcoal);
+    position: relative; overflow: hidden;
+  }
+  #emergency::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 40px,
+      rgba(201,168,76,0.015) 40px, rgba(201,168,76,0.015) 41px
+    );
+  }
+
+  .emergency-btn {
+    display: inline-flex; align-items: center; gap: 14px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem; letter-spacing: 0.1em;
+    padding: 20px 44px; border-radius: 6px;
+    animation: emergency-glow 2.5s ease-in-out infinite;
+    text-decoration: none;
+    transition: transform 0.15s;
+  }
+  .emergency-btn:hover { transform: scale(1.03); }
+  @keyframes emergency-glow {
+    0%,100% { box-shadow: 0 0 20px rgba(201,168,76,0.3), 0 0 60px rgba(201,168,76,0.15); }
+    50% { box-shadow: 0 0 40px rgba(201,168,76,0.6), 0 0 100px rgba(201,168,76,0.25); }
+  }
+
+  /* ── Testimonial ── */
+  .testimonial-card {
+    background: var(--charcoal-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px; padding: 28px;
+  }
+
+  /* ── Contact ── */
+  .contact-input {
+    width: 100%; background: var(--charcoal-mid);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; padding: 12px 16px;
+    color: var(--white); font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .contact-input:focus { border-color: rgba(201,168,76,0.5); }
+  .contact-input::placeholder { color: var(--white-faint); }
+
+  /* ── Map placeholder ── */
+  .map-placeholder {
+    width: 100%; height: 240px;
+    background: var(--charcoal-mid);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 8px;
+    color: var(--white-dim); font-size: 0.85rem;
+    position: relative; overflow: hidden;
+  }
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--charcoal);
+    border-top: 1px solid rgba(201,168,76,0.12);
+  }
+
+  /* ── Scroll reveal ── */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── Counter ── */
+  .counter-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem; color: var(--gold); line-height: 1;
+  }
+
+  /* ── Arc animation (SVG hero) ── */
+  .arc-path { fill: none; stroke: var(--gold); stroke-width: 1.5; opacity: 0.6; }
+  .arc-anim { stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw-arc 3s ease forwards; }
+  @keyframes draw-arc { to { stroke-dashoffset: 0; } }
+
+  /* ── Stars ── */
+  .stars { color: var(--gold); letter-spacing: 2px; }
+
+  /* ── Mobile menu ── */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: block; }
+
+  /* ── Scroll to top ── */
+  #scroll-top {
+    position: fixed; bottom: 28px; right: 28px; z-index: 99;
+    width: 44px; height: 44px;
+    background: var(--gold); color: var(--black);
+    border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; opacity: 0; transition: opacity 0.3s;
+    font-size: 1.1rem;
+  }
+  #scroll-top.visible { opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" class="px-6 py-5">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div style="width:36px;height:36px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M11 2L4 11h6l-1 7 7-9h-6l1-7z" fill="#08080A"/>
+        </svg>
+      </div>
+      <div>
+        <div class="display" style="font-size:1.2rem;color:var(--white);letter-spacing:0.08em;">MEGATRIC</div>
+        <div style="font-size:0.6rem;color:var(--gold);letter-spacing:0.2em;font-weight:600;text-transform:uppercase;margin-top:-3px;">Electrical CC</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="tel:+264812345678" class="btn-primary" style="padding:10px 22px;font-size:0.78rem;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call Now
+      </a>
+    </div>
+    <button id="menu-toggle" class="md:hidden" style="color:var(--white-dim);" aria-label="Toggle menu">
+      <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden px-6 pb-6 pt-2">
+    <div class="gold-line mb-4"></div>
+    <div class="flex flex-col gap-4">
+      <a href="#services" class="nav-link text-base" onclick="closeMobileMenu()">Services</a>
+      <a href="#about" class="nav-link text-base" onclick="closeMobileMenu()">About</a>
+      <a href="#contact" class="nav-link text-base" onclick="closeMobileMenu()">Contact</a>
+      <a href="tel:+264812345678" class="btn-primary mt-2" style="justify-content:center;">Call Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- SVG arc overlay -->
+  <svg style="position:absolute;top:0;right:0;width:50%;height:100%;opacity:0.3;z-index:1;pointer-events:none" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <!-- Static circuit lines -->
+    <path class="arc-path arc-anim" style="animation-delay:0.5s" filter="url(#glow)"
+      d="M 480 100 L 320 100 L 320 200 L 200 200 L 200 350 L 380 350 L 380 450 L 250 450"/>
+    <path class="arc-path arc-anim" style="animation-delay:1s;opacity:0.3"
+      d="M 460 300 L 350 300 L 350 180 L 420 180"/>
+    <path class="arc-path arc-anim" style="animation-delay:1.5s;opacity:0.2"
+      d="M 500 500 L 300 500 L 300 600 L 420 600 L 420 700"/>
+    <!-- Nodes -->
+    <circle cx="320" cy="100" r="4" fill="#C9A84C" opacity="0.8"/>
+    <circle cx="200" cy="200" r="4" fill="#C9A84C" opacity="0.8"/>
+    <circle cx="380" cy="350" r="4" fill="#C9A84C" opacity="0.8"/>
+    <circle cx="200" cy="350" r="6" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="350" cy="300" r="3" fill="#C9A84C" opacity="0.6"/>
+  </svg>
+
+  <div class="hero-content max-w-6xl mx-auto px-6 py-32 w-full">
+    <div style="max-width:680px;">
+      <!-- Label -->
+      <div class="section-label mb-6 reveal">Namibia's Electrical Specialists</div>
+
+      <!-- Headline -->
+      <h1 class="display hero-headline reveal reveal-delay-1 mb-6">
+        24/7 ELECTRICAL<br>
+        <span class="gold-word">SOLUTIONS</span><br>
+        YOU CAN DEPEND ON
+      </h1>
+
+      <!-- Sub -->
+      <p class="hero-sub reveal reveal-delay-2 mb-10">
+        Professional electrical installations, repairs, inspections, maintenance, and emergency callouts. Serving residential, commercial, and industrial clients across Namibia.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 reveal reveal-delay-3 mb-12">
+        <a href="tel:+264812345678" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Call Now
+        </a>
+        <a href="#contact" class="btn-secondary">
+          Request a Quote
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="flex flex-wrap gap-x-8 gap-y-3 reveal reveal-delay-4">
+        <div class="trust-badge"><div class="trust-dot"></div>Available 24/7</div>
+        <div class="trust-badge"><div class="trust-dot" style="animation-delay:0.5s"></div>Fast Response Times</div>
+        <div class="trust-badge"><div class="trust-dot" style="animation-delay:1s"></div>Registered Business</div>
+        <div class="trust-badge"><div class="trust-dot" style="animation-delay:1.5s"></div>Professional Service</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--white-faint);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;">
+    <div style="width:1px;height:40px;background:linear-gradient(to bottom, transparent, var(--gold));opacity:0.4;animation:scroll-hint 2s ease-in-out infinite;"></div>
+    Scroll
+  </div>
+</section>
+
+<style>
+@keyframes scroll-hint {
+  0%,100%{opacity:0.4;transform:scaleY(1)}
+  50%{opacity:0.8;transform:scaleY(1.2)}
+}
+</style>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14">
+      <div class="section-label mb-4 reveal">What We Do</div>
+      <h2 class="display reveal reveal-delay-1" style="font-size:clamp(2.5rem,5vw,4rem);">ELECTRICAL SERVICES<br><span class="gold-word">BUILT AROUND YOU</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+      <div class="service-card reveal">
+        <div class="service-icon">🔍</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Fault Diagnosis</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Rapid identification and assessment of electrical faults to restore your system safely.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">⚡</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Short Circuit Repairs</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Expert short circuit diagnosis and repair to protect your property and equipment.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🔌</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Appliance Repairs</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Professional repair of electrical appliances to extend lifespan and ensure safety.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🏠</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Home Inspections</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Thorough electrical inspections for peace of mind and compliance assurance.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🔧</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Electrical Installations</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Complete installation services for residential, commercial, and industrial needs.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">💡</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Lighting Solutions</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Energy-efficient lighting design and installation for any space or application.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🛠️</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Maintenance & Repairs</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Scheduled maintenance programs to keep your electrical systems running reliably.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🚨</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Emergency Services</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">24/7 emergency callouts. When it can't wait, we respond fast.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">🏗️</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">General Construction</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Electrical integration support for new builds and construction projects.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1 sm:col-span-2 lg:col-span-1">
+        <div class="service-icon">☀️</div>
+        <h3 style="font-weight:600;margin-bottom:8px;color:var(--white);">Solar Installation & Repairs</h3>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.6;">Solar panel installation and repair services for sustainable energy solutions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="gold-line mx-6"></div>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <!-- Left: counters -->
+      <div>
+        <div class="section-label mb-4 reveal">Why Megatric</div>
+        <h2 class="display reveal reveal-delay-1 mb-10" style="font-size:clamp(2.5rem,5vw,4rem);">QUALITY WORK.<br><span class="gold-word">EVERY TIME.</span></h2>
+
+        <div class="grid grid-cols-2 gap-6 mb-10">
+          <div class="reveal">
+            <div class="counter-num" data-target="24">0</div>
+            <div style="font-size:0.85rem;color:var(--white-dim);margin-top:4px;">Hour Availability</div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="counter-num" data-target="100">0</div>
+            <div style="font-size:0.85rem;color:var(--white-dim);margin-top:4px;">% Client Focus</div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="counter-num" data-target="10">0</div>
+            <div style="font-size:0.85rem;color:var(--white-dim);margin-top:4px;">Service Categories</div>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <div class="counter-num" data-target="7">0</div>
+            <div style="font-size:0.85rem;color:var(--white-dim);margin-top:4px;">Days a Week</div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      </div>
+
+      <!-- Right: features -->
+      <div class="flex flex-col gap-0">
+        <div class="feature-card reveal" style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">🕐</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">24/7 Availability</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">We never close. Electrical problems don't keep business hours, and neither do we.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-1" style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">🚀</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">Quick Response</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">We prioritise speed without sacrificing safety. Your call is answered, and we show up.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-2" style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">🏆</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">Reliable Workmanship</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">Every job is done right the first time. We don't cut corners on quality or safety.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-3" style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">🏢</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">Residential & Commercial</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">From homes to industrial sites — we have the experience and equipment to handle any scale.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card reveal" style="padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">💬</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">Transparent Communication</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">No hidden costs. No surprises. We explain the work and keep you informed at every step.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card reveal reveal-delay-1" style="padding:20px 24px;">
+          <div style="display:flex;align-items:flex-start;gap:16px;">
+            <div style="width:36px;height:36px;min-width:36px;background:rgba(201,168,76,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem;">❤️</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:4px;">Customer-Focused</div>
+              <div style="font-size:0.85rem;color:var(--white-dim);">Your satisfaction is the metric we measure every job by. Every client matters to us.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY -->
+<section id="emergency">
+  <div style="position:relative;z-index:2;padding:80px 24px;text-align:center;">
+    <div class="section-label reveal" style="justify-content:center;margin-bottom:16px;">Emergency Callout</div>
+    <h2 class="display reveal reveal-delay-1" style="font-size:clamp(2.5rem,6vw,5rem);margin-bottom:16px;">
+      ELECTRICAL EMERGENCY?<br><span class="gold-word">WE'RE READY TO HELP.</span>
+    </h2>
+    <p class="reveal reveal-delay-2" style="color:var(--white-dim);max-width:460px;margin:0 auto 40px;font-size:1rem;">
+      Don't wait. Power failures, sparks, burning smells, and exposed wiring are serious. Call us immediately — we're available around the clock.
+    </p>
+    <div class="reveal reveal-delay-3 flex flex-wrap gap-4 justify-center">
+      <a href="tel:+264812345678" class="emergency-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#08080A"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        CALL NOW — 24/7
+      </a>
+      <a href="https://wa.me/264812345678" class="btn-secondary" style="padding:18px 36px;font-size:0.95rem;">
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Visual -->
+      <div class="reveal order-2 lg:order-1">
+        <div style="position:relative;padding:2px;border-radius:8px;background:linear-gradient(135deg,rgba(201,168,76,0.4),transparent 60%,rgba(201,168,76,0.1));">
+          <div style="background:var(--charcoal-mid);border-radius:7px;padding:40px;position:relative;overflow:hidden;">
+            <!-- decorative -->
+            <div style="position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,0.08),transparent 70%);"></div>
+            <svg viewBox="0 0 280 240" style="width:100%;opacity:0.8">
+              <defs>
+                <filter id="glow2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <!-- House outline -->
+              <path d="M40 200 L40 110 L140 50 L240 110 L240 200 Z" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="1.5"/>
+              <!-- Roof -->
+              <path d="M20 115 L140 40 L260 115" fill="none" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+              <!-- Windows -->
+              <rect x="60" y="130" width="45" height="40" rx="2" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+              <rect x="175" y="130" width="45" height="40" rx="2" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+              <!-- Door -->
+              <rect x="110" y="145" width="40" height="55" rx="2" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+              <!-- Lightning bolt center -->
+              <path d="M150 80 L130 125 L148 125 L128 165 L165 115 L146 115 Z" fill="var(--gold)" filter="url(#glow2)" opacity="0.9"/>
+              <!-- Electrical lines -->
+              <line x1="82" y1="130" x2="82" y2="90" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line x1="197" y1="130" x2="197" y2="90" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="4,4"/>
+              <line x1="82" y1="90" x2="197" y2="90" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="4,4"/>
+              <!-- Glow dots -->
+              <circle cx="82" cy="90" r="3" fill="var(--gold)" filter="url(#glow2)"/>
+              <circle cx="197" cy="90" r="3" fill="var(--gold)" filter="url(#glow2)"/>
+              <circle cx="140" cy="90" r="3" fill="var(--gold)" filter="url(#glow2)"/>
+            </svg>
+            <!-- Badge -->
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:10px 16px;margin-top:16px;">
+              <div class="trust-dot"></div>
+              <span style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">Registered & Insured</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="order-1 lg:order-2">
+        <div class="section-label mb-4 reveal">Our Story</div>
+        <h2 class="display reveal reveal-delay-1 mb-6" style="font-size:clamp(2.2rem,4vw,3.5rem);">BUILT ON<br><span class="gold-word">HONESTY &<br>HARD WORK</span></h2>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <p class="reveal reveal-delay-2" style="color:var(--white-dim);font-size:0.95rem;line-height:1.8;">
+            Megatric Electrical CC was founded with a simple mission: provide dependable electrical services with honesty, quality workmanship, and rapid response times. As a growing company, every client matters, and every project is completed with care and professionalism.
+          </p>
+          <p class="reveal reveal-delay-3" style="color:var(--white-dim);font-size:0.95rem;line-height:1.8;">
+            We built Megatric because we saw a gap — too many clients waiting days for repairs, receiving unclear quotes, or dealing with work that simply wasn't done right. We set out to change that, one job at a time.
+          </p>
+          <p class="reveal" style="color:var(--white-dim);font-size:0.95rem;line-height:1.8;">
+            Based in Namibia, we serve residential homes, commercial properties, and industrial sites with the same level of dedication. We're growing fast because our clients trust us — and we work hard to earn that trust every single day.
+          </p>
+        </div>
+        <div class="mt-8 reveal reveal-delay-1">
+          <a href="#contact" class="btn-secondary">Work With Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line mx-6"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-label mb-4 reveal">Client Feedback</div>
+    <h2 class="display reveal reveal-delay-1 mb-14" style="font-size:clamp(2.5rem,5vw,4rem);">WHAT CLIENTS<br><span class="gold-word">SAY ABOUT US</span></h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="testimonial-card reveal">
+        <div class="stars mb-3">★★★★★</div>
+        <p style="color:var(--white-dim);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">"Megatric responded within the hour when we had a complete power failure. Professional, quick, and sorted the issue without any fuss. Highly recommend."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dim));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:var(--black);">TN</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">Tanya N.</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Residential Client, Windhoek</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars mb-3">★★★★★</div>
+        <p style="color:var(--white-dim);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">"We used Megatric for a full commercial installation. The workmanship was exceptional and they communicated every step of the way. Will definitely use again."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dim));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:var(--black);">SM</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">Stefan M.</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Business Owner, Swakopmund</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars mb-3">★★★★★</div>
+        <p style="color:var(--white-dim);font-size:0.9rem;line-height:1.7;margin-bottom:20px;">"Honest pricing and great service. They diagnosed a tricky fault other electricians missed and had it sorted same day. Real professionals."</p>
+        <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dim));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:var(--black);">LP</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">Lena P.</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Homeowner, Walvis Bay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--charcoal-mid);padding:80px 24px;">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-label mb-4 reveal">Get In Touch</div>
+    <h2 class="display reveal reveal-delay-1 mb-14" style="font-size:clamp(2.5rem,5vw,4rem);">LET'S TALK ABOUT<br><span class="gold-word">YOUR PROJECT</span></h2>
+
+    <div class="grid lg:grid-cols-2 gap-16">
+      <!-- Form -->
+      <div class="reveal">
+        <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;" onsubmit="handleFormSubmit(event)">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;">Full Name</label>
+              <input type="text" class="contact-input" placeholder="John Smith" required>
+            </div>
+            <div>
+              <label style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;">Phone</label>
+              <input type="tel" class="contact-input" placeholder="+264 81 234 5678">
+            </div>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;">Email</label>
+            <input type="email" class="contact-input" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;">Service Needed</label>
+            <select class="contact-input" style="cursor:pointer;">
+              <option value="" style="background:var(--charcoal);">Select a service</option>
+              <option style="background:var(--charcoal);">Fault Diagnosis</option>
+              <option style="background:var(--charcoal);">Short Circuit Repairs</option>
+              <option style="background:var(--charcoal);">Emergency Callout</option>
+              <option style="background:var(--charcoal);">Home Inspection</option>
+              <option style="background:var(--charcoal);">Solar Installation</option>
+              <option style="background:var(--charcoal);">Other</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;">Message</label>
+            <textarea class="contact-input" rows="4" placeholder="Describe your electrical issue or project..." style="resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="justify-content:center;">
+            Send Message
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div id="form-success" style="display:none;color:var(--gold);font-size:0.85rem;text-align:center;padding:12px;border:1px solid rgba(201,168,76,0.3);border-radius:4px;">
+            ✓ Message sent! We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div class="reveal reveal-delay-1 flex flex-col gap-8">
+        <!-- Quick contacts -->
+        <div>
+          <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Direct Contact</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="tel:+264812345678" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--charcoal);border-radius:6px;color:var(--white);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='var(--charcoal)'">
+              <div style="width:36px;height:36px;background:rgba(201,168,76,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem;color:var(--white-dim);">Call Us</div>
+                <div style="font-weight:600;">+264 81 234 5678</div>
+              </div>
+            </a>
+            <a href="mailto:info@megatric.com" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--charcoal);border-radius:6px;color:var(--white);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='var(--charcoal)'">
+              <div style="width:36px;height:36px;background:rgba(201,168,76,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem;color:var(--white-dim);">Email</div>
+                <div style="font-weight:600;">info@megatric.com</div>
+              </div>
+            </a>
+            <a href="https://facebook.com/megatricelectrical" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--charcoal);border-radius:6px;color:var(--white);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='var(--charcoal)'">
+              <div style="width:36px;height:36px;background:rgba(201,168,76,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem;color:var(--white-dim);">Facebook</div>
+                <div style="font-weight:600;">Megatric Electrical CC</div>
+              </div>
+            </a>
+            <a href="https://instagram.com/megatricelectrical" style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--charcoal);border-radius:6px;color:var(--white);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='var(--charcoal)'">
+              <div style="width:36px;height:36px;background:rgba(201,168,76,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem;color:var(--white-dim);">Instagram</div>
+                <div style="font-weight:600;">@megatricelectrical</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div>
+          <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Service Area</div>
+          <div class="map-placeholder">
+            <div class="map-grid"></div>
+            <div style="position:relative;z-index:1;text-align:center;">
+              <div style="font-size:2rem;margin-bottom:8px;">📍</div>
+              <div style="font-weight:600;color:var(--white);">Namibia-Wide Coverage</div>
+              <div style="font-size:0.8rem;color:var(--white-dim);">Windhoek · Swakopmund · Walvis Bay · and beyond</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div style="padding:20px;background:var(--charcoal);border-radius:6px;border:1px solid rgba(201,168,76,0.15);">
+          <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Operating Hours</div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:0.85rem;color:var(--white-dim);">
+            <div style="display:flex;justify-content:space-between;"><span>Monday – Friday</span><span style="color:var(--white);">07:00 – 18:00</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>Saturday</span><span style="color:var(--white);">08:00 – 14:00</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>Emergency Callout</span><span style="color:var(--gold);font-weight:600;">24/7 Always</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="px-6 pt-16 pb-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11 2L4 11h6l-1 7 7-9h-6l1-7z" fill="#08080A"/></svg>
+          </div>
+          <div>
+            <div class="display" style="font-size:1.1rem;color:var(--white);letter-spacing:0.08em;">MEGATRIC</div>
+            <div style="font-size:0.6rem;color:var(--gold);letter-spacing:0.2em;font-weight:600;text-transform:uppercase;">Electrical CC</div>
+          </div>
+        </div>
+        <p style="font-size:0.85rem;color:var(--white-dim);line-height:1.7;margin-bottom:16px;">Fast Response. Reliable Service. Quality Work. Serving Namibia 24/7.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://facebook.com/megatricelectrical" style="width:36px;height:36px;background:var(--charcoal-mid);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='var(--charcoal-mid)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--white-dim)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/megatricelectrical" style="width:36px;height:36px;background:var(--charcoal-mid);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='var(--charcoal-mid)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--white-dim)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/264812345678" style="width:36px;height:36px;background:var(--charcoal-mid);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.15)'" onmouseout="this.style.background='var(--charcoal-mid)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--white-dim)"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Services</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Fault Diagnosis</a>
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Emergency Services</a>
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Electrical Installations</a>
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Solar Installation</a>
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Lighting Solutions</a>
+          <a href="#services" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">Maintenance & Repairs</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--gold)" style="flex-shrink:0;margin-top:2px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:+264812345678" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;">+264 81 234 5678</a>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="flex-shrink:0;margin-top:2px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@megatric.com" style="font-size:0.85rem;color:var(--white-dim);text-decoration:none;">info@megatric.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div>
+        <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Hours</div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:0.82rem;color:var(--white-dim);">
+          <div>Mon – Fri: 07:00 – 18:00</div>
+          <div>Saturday: 08:00 – 14:00</div>
+          <div style="display:flex;align-items:center;gap:8px;color:var(--gold);font-weight:600;margin-top:4px;">
+            <div class="trust-dot" style="animation-delay:0.3s"></div>
+            Emergency: 24/7
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-line mb-6"></div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;font-size:0.75rem;color:var(--white-faint);">
+      <div>© 2025 Megatric Electrical CC. All rights reserved. Registered in Namibia.</div>
+      <div>Fast Response. Reliable Service. Quality Work.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<div id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</div>
+
+<script>
+// ── Canvas particle / energy streaks ──
+const canvas = document.getElementById('hero-canvas');
+const ctx = canvas.getContext('2d');
+let W, H, particles = [], streaks = [], mouse = {x:0,y:0};
+
+function resize(){
+  W = canvas.width = canvas.offsetWidth;
+  H = canvas.height = canvas.offsetHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// Floating particles
+for(let i=0;i<60;i++){
+  particles.push({
+    x: Math.random()*1600, y: Math.random()*900,
+    vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3,
+    r: Math.random()*1.5+0.3,
+    o: Math.random()*0.5+0.1
+  });
+}
+
+// Energy streaks
+function newStreak(){
+  const x = Math.random()*W;
+  return { x, y: Math.random()*H*0.6, len: Math.random()*120+60,
+    speed: Math.random()*2+1, progress:0,
+    alpha: Math.random()*0.4+0.1, angle: Math.PI/2 + (Math.random()-0.5)*0.3 };
+}
+for(let i=0;i<6;i++) streaks.push(newStreak());
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+
+  // Particles
+  particles.forEach(p=>{
+    p.x += p.vx; p.y += p.vy;
+    if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+    if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(201,168,76,${p.o})`;
+    ctx.fill();
+  });
+
+  // Streaks
+  streaks.forEach((s,i)=>{
+    s.progress += s.speed;
+    const x1 = s.x + Math.cos(s.angle)*s.progress;
+    const y1 = s.y + Math.sin(s.angle)*s.progress;
+    const x0 = s.x + Math.cos(s.angle)*Math.max(0,s.progress-s.len);
+    const y0 = s.y + Math.sin(s.angle)*Math.max(0,s.progress-s.len);
+    const grad = ctx.createLinearGradient(x0,y0,x1,y1);
+    grad.addColorStop(0,'rgba(201,168,76,0)');
+    grad.addColorStop(1,`rgba(201,168,76,${s.alpha})`);
+    ctx.beginPath();
+    ctx.moveTo(x0,y0); ctx.lineTo(x1,y1);
+    ctx.strokeStyle=grad;
+    ctx.lineWidth=1.2; ctx.stroke();
+    if(s.progress > s.len + Math.max(W,H)){
+      streaks[i]=newStreak();
+    }
+  });
+
+  // Subtle mouse glow
+  const grd = ctx.createRadialGradient(mouse.x,mouse.y,0,mouse.x,mouse.y,250);
+  grd.addColorStop(0,'rgba(201,168,76,0.03)');
+  grd.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.fillStyle=grd; ctx.fillRect(0,0,W,H);
+
+  requestAnimationFrame(draw);
+}
+draw();
+
+// Mouse parallax
+document.getElementById('hero').addEventListener('mousemove',e=>{
+  const r = e.currentTarget.getBoundingClientRect();
+  mouse.x = e.clientX - r.left;
+  mouse.y = e.clientY - r.top;
+});
+
+// ── Scroll reveal ──
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.12});
+reveals.forEach(el=>observer.observe(el));
+
+// Trigger hero elements immediately
+document.querySelectorAll('#hero .reveal').forEach(el=>el.classList.add('visible'));
+
+// ── Animated counters ──
+const counters = document.querySelectorAll('.counter-num');
+const counterObs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const el=entry.target;
+      const target=+el.dataset.target;
+      let current=0;
+      const step=Math.ceil(target/40);
+      const interval=setInterval(()=>{
+        current=Math.min(current+step,target);
+        el.textContent=current;
+        if(current>=target)clearInterval(interval);
+      },30);
+      counterObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+counters.forEach(c=>counterObs.observe(c));
+
+// ── Navbar scroll ──
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);
+  document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>400);
+});
+
+// ── Mobile menu ──
+document.getElementById('menu-toggle').addEventListener('click',()=>{
+  const menu=document.getElementById('mobile-menu');
+  const isOpen=menu.classList.toggle('open');
+  document.getElementById('menu-icon-open').classList.toggle('hidden',isOpen);
+  document.getElementById('menu-icon-close').classList.toggle('hidden',!isOpen);
+});
+function closeMobileMenu(){
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('menu-icon-open').classList.remove('hidden');
+  document.getElementById('menu-icon-close').classList.add('hidden');
+}
+
+// ── Form submit ──
+function handleFormSubmit(e){
+  e.preventDefault();
+  document.getElementById('form-success').style.display='block';
+  e.target.reset();
+  setTimeout(()=>{ document.getElementById('form-success').style.display='none'; },5000);
+}
+</script>
+</body>
+</html>
